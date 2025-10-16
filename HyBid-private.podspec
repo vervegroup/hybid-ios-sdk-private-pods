@@ -1,8 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'HyBid-private'
   s.version          = '3.7.0-beta4-build.103'
-  s.summary          = 'Private HyBid SDK release.'
-  s.description      = 'Private binary distribution of the HyBid SDK with OMSDK support.'
+  s.summary          = 'Private HyBid SDK with binary framework'
   s.homepage         = 'https://github.com/vervegroup/hybid-ios-sdk-private-pods'
   s.license          = { :type => 'Commercial', :file => 'LICENSE' }
   s.author           = { 'Verve Group' => 'support@verve.com' }
@@ -17,5 +16,5 @@ Pod::Spec.new do |s|
     'OMSDK_Pubnativenet/OMSDK_Pubnativenet.xcframework'
   ]
 
-  s.requires_arc = true
+  s.dependency 'ATOM-private'
 end
