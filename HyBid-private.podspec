@@ -8,7 +8,9 @@ Pod::Spec.new do |s|
   s.author           = { 'Verve Group' => 'support@verve.com' }
   s.platform         = :ios, '12.0'
 
-  s.source           = { :git => 'https://github.com/vervegroup/hybid-ios-sdk-private-pods.git', :tag => s.version.to_s }
+  s.source = {
+    :http => "https://github.com/vervegroup/hybid-ios-sdk-private-pods/releases/download/#{s.version}/HyBid.xcframework.zip"
+  }
 
   s.vendored_frameworks = [
     'HyBid.xcframework/HyBid.xcframework',
