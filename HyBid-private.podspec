@@ -8,6 +8,11 @@ Pod::Spec.new do |s|
   s.author           = { 'Verve Group' => 'support@verve.com' }
   s.platform         = :ios, '12.0'
 
+  s.preserve_paths = [
+    'HyBid.xcframework/**/*',
+    'OMSDK_Pubnativenet/OMSDK_Pubnativenet.xcframework/**/*'
+  ]
+
   s.source = {
     :http => "https://github.com/vervegroup/hybid-ios-sdk-private-pods/releases/download/#{s.version}/HyBid.xcframework.zip"
   }
@@ -18,6 +23,6 @@ Pod::Spec.new do |s|
   ]
 
   s.module_name = 'HyBid'
-  s.dependency 'ATOM-Standalone'
   s.static_framework = true
+  s.dependency 'ATOM-Standalone'
 end
