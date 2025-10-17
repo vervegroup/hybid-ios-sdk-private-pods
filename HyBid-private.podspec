@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   }
 
   s.vendored_frameworks = [
-    'HyBid.xcframework',
-    'OMSDK_Pubnativenet/OMSDK_Pubnativenet.xcframework'
+    'HyBid.xcframework*/HyBid.xcframework',
+    'HyBid.xcframework*/OMSDK_Pubnativenet/OMSDK_Pubnativenet.xcframework'
   ]
 
   s.dependency 'ATOM-Standalone'
