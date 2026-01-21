@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HyBid-private'
-  s.version          = '3.7.1-build.8911'
+  s.version          = '3.7.1-build.8916'
   s.summary          = 'Private HyBid SDK binary distribution'
   s.description      = 'Private binary SDK build with OMSDK support. Includes dependency on ATOM, which is licensed separately.'
   s.homepage         = 'https://github.com/vervegroup/hybid-ios-sdk-private-pods'
@@ -18,4 +18,9 @@ Pod::Spec.new do |s|
   ]
 
   s.dependency 'ATOM-Standalone-Private', '3.9.0-beta.111'
+
+  # Ensure ATOM framework is properly linked when using HyBid vendored framework
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-framework ATOM'
+  }
 end
