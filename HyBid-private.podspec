@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HyBid-private"
-  s.version      = '3.7.1-build.8926'
+  s.version      = '3.7.1-build.8927'
   s.summary      = "This is the iOS SDK of HyBid. You can read more about it at https://pubnative.net."
   s.description = <<-DESC
                      HyBid leverages first-look prebid technology to maximize yield for the publishers across
@@ -45,31 +45,31 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Banner' do |banner|
-    banner.dependency           'HyBid/Core'
+    banner.dependency           'HyBid-private/Core'
     banner.source_files         = ['PubnativeLite/PubnativeLite/Banner/**/*.{swift,h,m}']
     banner.public_header_files = ['PubnativeLite/PubnativeLite/Banner/**/*.h']
   end
 
   s.subspec 'Native' do |native|
-    native.dependency           'HyBid/Core'
+    native.dependency           'HyBid-private/Core'
     native.source_files     = ['PubnativeLite/PubnativeLite/Native/**/*.{swift,h,m}']
     native.public_header_files = ['PubnativeLite/PubnativeLite/Native/**/*.h']
   end
 
   s.subspec 'FullScreen' do |fullscreen|
-    fullscreen.dependency       'HyBid/Core'
+    fullscreen.dependency       'HyBid-private/Core'
     fullscreen.source_files     = ['PubnativeLite/PubnativeLite/FullScreen/**/*.{swift,h,m}']
     fullscreen.public_header_files = ['PubnativeLite/PubnativeLite/FullScreen/Public/*.h']
   end
 
   s.subspec 'RewardedVideo' do |rewarded|
-    rewarded.dependency         'HyBid/Core'
+    rewarded.dependency         'HyBid-private/Core'
     rewarded.source_files       = ['PubnativeLite/PubnativeLite/Rewarded/**/*.{swift,h,m}']
     rewarded.public_header_files = ['PubnativeLite/PubnativeLite/Rewarded/Public/*.h']
   end
 
   s.subspec 'ATOM' do |atom|
-    atom.dependency 'HyBid/Core'
+    atom.dependency 'HyBid-private/Core'
     atom.dependency 'ATOM-Standalone-Private', '3.9.0-beta.111'
   end
 
