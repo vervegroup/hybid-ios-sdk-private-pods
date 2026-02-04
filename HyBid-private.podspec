@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'HyBid-private'
-  s.version          = '3.7.1-build.51'
+  s.version          = '3.7.1-build.8963'
   s.summary          = 'Private HyBid SDK binary distribution'
   s.description      = 'Private binary SDK build with OMSDK support. Includes dependency on ATOM, which is licensed separately.'
   s.homepage         = 'https://github.com/vervegroup/hybid-ios-sdk-private-pods'
