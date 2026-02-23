@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "HyBid-private"
   s.module_name  = "HyBid"
-  s.version      = '3.7.1-build.9067'
+  s.version      = '3.7.1-build.9070'
   s.summary      = "This is the iOS SDK of HyBid. You can read more about it at https://pubnative.net."
   s.description = <<-DESC
                      HyBid leverages first-look prebid technology to maximize yield for the publishers across
@@ -31,10 +31,7 @@ Pod::Spec.new do |s|
 
   s.swift_version = '5.0'
   s.pod_target_xcconfig = {
-    'OTHER_SWIFT_FLAGS' => '-Xcc -Wno-incomplete-umbrella',
-    'GCC_OPTIMIZATION_LEVEL'  => 's',
-    'SWIFT_OPTIMIZATION_LEVEL'=> '-Osize',
-    'DEAD_CODE_STRIPPING' => 'YES'
+    'OTHER_SWIFT_FLAGS' => '-Xcc -Wno-incomplete-umbrella'
   }
 
   s.subspec 'Core' do |core|
