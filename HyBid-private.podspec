@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "HyBid-private"
   s.module_name  = "HyBid"
-  s.version      = '3.7.1-build.9134'
+  s.version      = '3.7.1-build.9136'
   s.summary      = "This is the iOS SDK of HyBid. You can read more about it at https://pubnative.net."
   s.description = <<-DESC
                      HyBid leverages first-look prebid technology to maximize yield for the publishers across
@@ -36,9 +36,9 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files          = 'PubnativeLite/PubnativeLite/Core/**/*.{swift,h,m}'
-    core.resources            =  ['PubnativeLite/PubnativeLite/Resources/**/*', 'PubnativeLite/PubnativeLite/OMSDK-1.5.4/*.js', 'PubnativeLite/PubnativeLite/Core/MRAID/*.js']
+    core.resources            =  ['PubnativeLite/PubnativeLite/Resources/**/*', 'PubnativeLite/PubnativeLite/OMSDK-1.6.3/*.js', 'PubnativeLite/PubnativeLite/Core/MRAID/*.js']
     core.exclude_files         = 'PubnativeLite/PubnativeLite/Core/Public/HyBidStatic.{swift,h,m}'
-    core.vendored_frameworks   = ['PubnativeLite/PubnativeLite/OMSDK-1.5.4/*.{xcframework}']
+    core.vendored_frameworks   = ['PubnativeLite/PubnativeLite/OMSDK-1.6.3/*.{xcframework}']
     core.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '/HyBid/module' }
     core.xcconfig = { 'HEADER_SEARCH_PATHS' => '/usr/include/libxml2 /HyBid/module' }
     core.public_header_files = ['PubnativeLite/PubnativeLite/Core/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Viewability/Public/*.h' , 'PubnativeLite/PubnativeLite/Core/Consent/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Ad Model/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Ad Request/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Ad Cache/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Ad Presenter/Public/*.h', 'PubnativeLite/PubnativeLite/Core/MRAID/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Remote Config/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Auction/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Utils/Public/*.h', 'PubnativeLite/PubnativeLite/Core/VAST/Public/*.h', 'PubnativeLite/PubnativeLite/Core/Analytics/Public/*.h']
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'ATOM' do |atom|
     atom.dependency 'HyBid-private/Core'
-    atom.dependency 'ATOM-Standalone-Private', '3.9.0-beta.151'
+    atom.dependency 'ATOM-Standalone-Private', '3.9.0-beta.152'
   end
 
   s.default_subspecs = ['Core', 'Banner', 'Native', 'FullScreen', 'RewardedVideo', 'ATOM']
