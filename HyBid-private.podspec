@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "HyBid-private"
   s.module_name  = "HyBid"
-  s.version      = '3.8.0-build.9296'
+  s.version      = '3.8.0-build.9297'
   s.summary      = "This is the iOS SDK of HyBid. You can read more about it at https://pubnative.net."
   s.description = <<-DESC
                      HyBid leverages first-look prebid technology to maximize yield for the publishers across
