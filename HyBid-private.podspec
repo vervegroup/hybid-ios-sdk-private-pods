@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "HyBid-private"
   s.module_name  = "HyBid"
-  s.version      = '3.8.1-build.568'
+  s.version      = '3.8.1-build.574'
   s.summary      = "This is the iOS SDK of HyBid. You can read more about it at https://pubnative.net."
   s.description = <<-DESC
                      HyBid leverages first-look prebid technology to maximize yield for the publishers across
@@ -69,11 +69,6 @@ Pod::Spec.new do |s|
     rewarded.public_header_files = ['PubnativeLite/PubnativeLite/Rewarded/Public/*.h']
   end
 
-  s.subspec 'ATOM' do |atom|
-    atom.dependency 'HyBid-private/Core'
-    atom.dependency 'ATOM-Standalone-Private', '3.9.0-beta.226'
-  end
-
-  s.default_subspecs = ['Core', 'Banner', 'Native', 'FullScreen', 'RewardedVideo', 'ATOM']
+  s.default_subspecs = ['Core', 'Banner', 'Native', 'FullScreen', 'RewardedVideo']
   
 end
